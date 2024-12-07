@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proveedores_CRUD_MVVM_Q42024.Views.ProveedorFormView"
+             
+             xmlns:viewModel="clr-namespace:Proveedores_CRUD_MVVM_Q42024.ViewModels"
+             x:DataType="viewModel:ProveedorFormViewModel"
+             
+             Title="">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="5">
+            <Label Text="Id del proveedor:"  />
+            <Entry Text="{Binding IdProveedor}" IsReadOnly="True" />
+
+            <Label Text="Nombre de empresa:" />
+            <Entry Text="{Binding NombreEmpresa}" Keyboard="Text" />
+
+            <Label Text="RTN:" />
+            <Entry Text="{Binding Rtn}" Keyboard="Text" />
+
+            <Label Text="Dirección:" />
+            <Entry Text="{Binding Direccion}" Keyboard="Text" />
+
+            <Label Text="Teléfono:" />
+            <Entry Text="{Binding Telefono}" Keyboard="Telephone" />
+
+            <Button Text="Guardar" Command="{Binding AddUpdateCommand}" BackgroundColor="Blue" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
